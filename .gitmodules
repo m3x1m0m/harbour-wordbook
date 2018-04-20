@@ -1,0 +1,3 @@
+[submodule "dictcc"]
+	path = dictcc
+	url = https://github.com/m3x1m0m/dictcc
