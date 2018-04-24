@@ -34,8 +34,9 @@ DictModel::DictModel(QObject *parent) :
     QAbstractListModel(parent)
 {
     d_msg = "";
-    // Create dictionary
+    // Create dictionary.
     d_wordbook = dictcc::creator::create("DESV");
+    // Initialise with shared pointer to empty lists, so it actually holds data.
     d_result = d_wordbook->get_translations();
 }
 
@@ -96,9 +97,16 @@ void DictModel::search(QString word)
     // Perform search
     try {
         d_result = d_wordbook->search(word.toStdString());
+        d_msg = nullptr;
     } catch (const dictcc::dict_exception& e) {
         d_result = d_wordbook->reset_search();
         d_msg = e.what();
     }
     endResetModel();
+}
+
+void DictModel::change_language(QString lang)
+{
+    d_wordbook.reset();
+    d_wordbook = dictcc::creator::create(lang.toStdString());
 }

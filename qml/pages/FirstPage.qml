@@ -10,7 +10,7 @@ Page {
         contentHeight: parent.height
         SilicaListView {
             anchors.fill: parent
-            spacing: Theme.paddingLarge
+            spacing: Theme.paddingMedium
             model: DictModel {
                 id: dict_model
             }
@@ -53,14 +53,15 @@ Page {
             delegate: Column {
                 width: page.width
                 Label {
-                    text: "This is a test with a longer text.jjjjj jjj jjjjjj jjj jjjjjjjj jjjj jjjjjjjjjj jjjjjj"
+                    id: body
+                    text: msg2usr
                     color: Theme.primaryColor
-                    font.family: Theme.fontFamilyHeading
                     font.pixelSize: Theme.fontSizeLarge
                     wrapMode: Text.WordWrap
-                    maximumLineCount: 10
+                    //maximumLineCount: 3
                     anchors {
-                        horizontalCenter: parent.horizontalCenter
+                        left: parent.left
+                        right: parent.right
                         leftMargin: Theme.paddingMedium
                         rightMargin: Theme.paddingMedium
                     }

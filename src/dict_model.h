@@ -53,6 +53,7 @@ public:
 
     //Q_INVOKABLE void activate(const int i);
     Q_INVOKABLE void search(QString word);
+    Q_INVOKABLE void change_language(QString lang);
 
 private:
     std::shared_ptr<dictcc::dict> d_wordbook = nullptr;
