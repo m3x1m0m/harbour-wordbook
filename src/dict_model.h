@@ -32,7 +32,7 @@
 #define DICTMODEL_H
 
 #include <QAbstractListModel>
-#include "../dict/dict.h"
+#include "../dictcc/dict.h"
 
 class DictModel : public QAbstractListModel
 {

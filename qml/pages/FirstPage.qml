@@ -18,11 +18,15 @@ Page {
                 PullDownMenu {
                     MenuItem {
                         text: "DEEN"
-                        onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
+                        onClicked: dict_model.change_language("DEEN")
                     }
                     MenuItem {
                         text: "DESV"
-                        onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
+                        onClicked: dict_model.change_language("DESV")
+                    }
+                    MenuItem {
+                        text: "DENL"
+                        onClicked: dict_model.change_language("DENL")
                     }
                     MenuItem {
                         text: "About"
