@@ -38,7 +38,8 @@ SOURCES += src/harbour-wordbook.cpp \
     src/dict_model.cpp \
     dictcc/dict/dict_imp.cc \
     dictcc/dict/desv.cc \
-    dictcc/dict/deen.cc
+    dictcc/dict/deen.cc \
+    dictcc/dict/denl.cc
 
 DISTFILES += qml/harbour-wordbook.qml \
     qml/cover/CoverPage.qml \
@@ -49,7 +50,8 @@ DISTFILES += qml/harbour-wordbook.qml \
     translations/*.ts \
     harbour-wordbook.desktop \
     qml/pages/About.qml \
-    qml/pages/FirstPage.qml
+    qml/pages/FirstPage.qml \
+    qml/pages/Settings.qml
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -71,4 +73,5 @@ HEADERS += \
     dictcc/dict/dict_int.h \
     dictcc/dict/desv.h \
     dictcc/dict/deen.h \
-    dictcc/dict/creator.h
+    dictcc/dict/creator.h \
+    dictcc/dict/denl.h

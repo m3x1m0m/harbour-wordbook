@@ -35,7 +35,7 @@ DictModel::DictModel(QObject *parent) :
 {
     d_msg = "";
     // Create dictionary.
-    d_wordbook = dictcc::creator::create("DESV");
+    d_wordbook = dictcc::creator::create("DENL");
     // Initialise with shared pointer to empty lists, so it actually holds data.
     d_result = d_wordbook->get_translations();
 }
